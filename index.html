@@ -1,1 +1,296 @@
-hello world 🌍 we are not available right now visit https://netlinkagencies.linkpc.net
+cat > /home/claude/index.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>NETLINK AGENCIES — Earn Money Online in Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Nunito',sans-serif;background:#1a0010;color:#fff;min-height:100vh;overflow-x:hidden;}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:#1a0010;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;transition:opacity .5s;}
+#loader.hide{opacity:0;pointer-events:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* MARQUEE */
+.marquee-wrap{background:linear-gradient(135deg,#B0156A,#FF4DB8);padding:10px 0;overflow:hidden;white-space:nowrap;}
+.marquee-track{display:inline-block;animation:marquee 25s linear infinite;}
+@keyframes marquee{from{transform:translateX(100vw);}to{transform:translateX(-100%);}}
+.marquee-text{font-size:13px;font-weight:700;color:#fff;letter-spacing:.5px;}
+
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,0,16,.95);backdrop-filter:blur(10px);border-bottom:1px solid #6b0040;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo-icon{width:36px;height:36px;background:linear-gradient(135deg,#B0156A,#FF4DB8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.nav-logo-text{font-size:14px;font-weight:900;color:#fff;line-height:1.1;}
+.nav-logo-sub{font-size:8px;color:rgba(255,255,255,.7);letter-spacing:2px;}
+.nav-btns{display:flex;gap:8px;}
+.btn-login{background:transparent;border:1.5px solid #E91E8C;color:#FF4DB8;border-radius:8px;padding:7px 16px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:800;cursor:pointer;text-decoration:none;}
+.btn-register{background:linear-gradient(135deg,#B0156A,#FF4DB8);border:none;color:#fff;border-radius:8px;padding:7px 16px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:800;cursor:pointer;text-decoration:none;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(233,30,140,.15) 0%,transparent 70%);pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(233,30,140,.15);border:1px solid #6b0040;border-radius:20px;padding:5px 14px;font-size:11px;font-weight:700;color:#FF4DB8;margin-bottom:18px;}
+.hero h1{font-size:32px;font-weight:900;line-height:1.2;margin-bottom:14px;}
+.hero h1 span{background:linear-gradient(135deg,#E91E8C,#FF4DB8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero p{font-size:15px;color:rgba(255,255,255,.75);line-height:1.7;max-width:340px;margin:0 auto 28px;}
+.hero-btns{display:flex;flex-direction:column;gap:12px;width:100%;max-width:320px;}
+.btn-primary{background:linear-gradient(135deg,#B0156A,#FF4DB8);border:none;color:#fff;border-radius:12px;padding:15px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:800;cursor:pointer;text-decoration:none;display:block;text-align:center;box-shadow:0 8px 24px rgba(233,30,140,.4);}
+.btn-secondary{background:transparent;border:1.5px solid #E91E8C;color:#FF4DB8;border-radius:12px;padding:14px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:800;cursor:pointer;text-decoration:none;display:block;text-align:center;}
+.hero-stats{display:flex;gap:24px;justify-content:center;margin-top:36px;}
+.stat{text-align:center;}
+.stat-num{font-size:22px;font-weight:900;color:#FF4DB8;}
+.stat-label{font-size:10px;color:rgba(255,255,255,.6);font-weight:600;margin-top:2px;}
+
+/* SECTIONS */
+.section{padding:60px 20px;}
+.section-title{font-size:22px;font-weight:900;text-align:center;margin-bottom:6px;}
+.section-sub{font-size:13px;color:rgba(255,255,255,.6);text-align:center;margin-bottom:32px;}
+.steps{display:flex;flex-direction:column;gap:16px;max-width:400px;margin:0 auto;}
+.step{background:#2d0019;border:1px solid #6b0040;border-radius:14px;padding:18px;display:flex;align-items:flex-start;gap:14px;}
+.step-num{width:38px;height:38px;background:linear-gradient(135deg,#B0156A,#FF4DB8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;flex-shrink:0;}
+.step-title{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;}
+.step-desc{font-size:12px;color:rgba(255,255,255,.65);line-height:1.5;}
+
+/* EARN */
+.earn-section{padding:60px 20px;background:#2a0018;}
+.earn-grid{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto;}
+.earn-card{background:#2d0019;border:1px solid #6b0040;border-radius:14px;padding:16px;display:flex;align-items:center;justify-content:space-between;}
+.earn-left{display:flex;align-items:center;gap:12px;}
+.earn-icon{font-size:24px;}
+.earn-name{font-size:13px;font-weight:800;color:#fff;}
+.earn-desc{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px;}
+.earn-amount{font-size:14px;font-weight:900;color:#FF4DB8;}
+
+/* TESTIMONIALS */
+.testi-section{padding:60px 20px;background:#2a0018;}
+.testi-grid{display:flex;flex-direction:column;gap:14px;max-width:400px;margin:0 auto;}
+.testi-card{background:#2d0019;border:1px solid #6b0040;border-radius:14px;padding:16px;}
+.testi-text{font-size:13px;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:12px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:10px;}
+.testi-avatar{width:36px;height:36px;background:linear-gradient(135deg,#B0156A,#FF4DB8);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex-shrink:0;}
+.testi-name{font-size:12px;font-weight:800;color:#fff;}
+.testi-loc{font-size:10px;color:rgba(255,255,255,.5);}
+
+/* WITHDRAWAL */
+.withdraw-section{padding:60px 20px;}
+.withdraw-grid{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto;}
+.withdraw-card{background:#2d0019;border:1px solid #6b0040;border-radius:14px;padding:16px;}
+.withdraw-country{font-size:13px;font-weight:800;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.method-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(107,0,64,.4);}
+.method-row:last-child{border-bottom:none;}
+.method-left{display:flex;align-items:center;gap:8px;}
+.method-logo{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:10px;flex-shrink:0;}
+.method-name{font-size:12px;color:#fff;font-weight:600;}
+.method-min{font-size:12px;font-weight:800;color:#FF4DB8;}
+
+/* SOCIAL */
+.social-section{padding:50px 20px;background:#2a0018;}
+.social-grid{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto;}
+.social-card{border-radius:14px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;}
+.social-left{display:flex;align-items:center;gap:12px;}
+.social-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.social-name{font-size:13px;font-weight:800;color:#fff;}
+.social-handle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px;}
+.social-btn{border:none;border-radius:8px;padding:7px 14px;font-family:'Nunito',sans-serif;font-size:11px;font-weight:800;cursor:pointer;text-decoration:none;white-space:nowrap;}
+
+/* CTA */
+.cta-section{padding:60px 20px;text-align:center;}
+.cta-box{background:linear-gradient(135deg,#B0156A,#FF4DB8);border-radius:20px;padding:36px 24px;max-width:400px;margin:0 auto;}
+.cta-title{font-size:24px;font-weight:900;color:#fff;margin-bottom:10px;}
+.cta-desc{font-size:13px;color:rgba(255,255,255,.9);margin-bottom:24px;line-height:1.6;}
+.btn-white{background:#fff;color:#B0156A;border:none;border-radius:12px;padding:15px 30px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block;}
+
+/* FOOTER */
+.footer{background:#0d0008;border-top:1px solid #6b0040;padding:30px 20px;text-align:center;}
+.footer-logo{font-size:16px;font-weight:900;color:#fff;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:16px;}
+.footer-links a{font-size:11px;color:rgba(255,255,255,.6);text-decoration:none;font-weight:600;}
+.footer-links a:hover{color:#FF4DB8;}
+.footer-divider{width:60px;height:1px;background:#6b0040;margin:14px auto;}
+.footer-copy{font-size:10px;color:rgba(255,255,255,.4);line-height:1.6;}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+    <div style="position:relative;width:80px;height:80px;">
+      <div style="position:absolute;inset:0;border-radius:50%;border:3px solid rgba(233,30,140,.2);border-top-color:#E91E8C;border-right-color:#FF4DB8;animation:spin 1s linear infinite;"></div>
+      <div style="position:absolute;inset:8px;background:linear-gradient(135deg,#B0156A,#FF4DB8);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;">🔗</div>
+    </div>
+    <div style="font-size:15px;font-weight:900;color:#fff;">NETLINK AGENCIES</div>
+    <div style="font-size:11px;color:rgba(255,255,255,.5);letter-spacing:2px;">LOADING...</div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <div class="nav-logo-icon">🔗</div>
+    <div><div class="nav-logo-text">NETLINK</div><div class="nav-logo-sub">AGENCIES</div></div>
+  </div>
+  <div class="nav-btns">
+    <a href="/login" class="btn-login">Log In</a>
+    <a href="/register" class="btn-register">Register</a>
+  </div>
+</nav>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" style="margin-top:62px;">
+  <div class="marquee-track">
+    <span class="marquee-text">🔗 Welcome to NETLINK AGENCIES — Kenya's #1 Online Earning Platform! 🚀 Earn real money daily through tasks, referrals &amp; bonuses. Join thousands of members already earning! 💰 Register FREE today and activate for just KES 150. Withdraw to M-Pesa, MTN, Airtel, PayPal &amp; Bank Transfer. 🎁 Get KES 100 Karibu Bonus after 20 referrals. 👥 3-Level Referral System — earn KES 80, KES 20 &amp; KES 10 per referral. Start your earning journey with NETLINK AGENCIES today! 🌟</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:40px;">
+  <div class="hero-badge">🇰🇪 #1 Earning Platform in Kenya</div>
+  <h1>Earn Real Money<br/>Online with <span>NETLINK</span></h1>
+  <p>Join thousands of Kenyans earning daily through tasks, referrals, surveys, forex trading and more — all from your phone!</p>
+  <div class="hero-btns">
+    <a href="/register" class="btn-primary">🚀 Start Earning Today — Free!</a>
+    <a href="/login" class="btn-secondary">Already a member? Log In</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">5,000+</div><div class="stat-label">Members</div></div>
+    <div class="stat"><div class="stat-num">KES 150</div><div class="stat-label">Activation</div></div>
+    <div class="stat"><div class="stat-num">KES 80</div><div class="stat-label">Per Referral</div></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="section-title">How It Works</div>
+  <div class="section-sub">Get started in 3 simple steps</div>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div><div class="step-title">Register for Free</div><div class="step-desc">Create your account in seconds with your name, username, email and country.</div></div></div>
+    <div class="step"><div class="step-num">2</div><div><div class="step-title">Activate Your Account</div><div class="step-desc">Pay a one-time KES 150 activation fee via M-Pesa to unlock all earning features.</div></div></div>
+    <div class="step"><div class="step-num">3</div><div><div class="step-title">Earn & Withdraw</div><div class="step-desc">Complete tasks, invite friends, earn daily and withdraw to M-Pesa or PayPal!</div></div></div>
+  </div>
+</section>
+
+<!-- WAYS TO EARN -->
+<section class="earn-section">
+  <div class="section-title">Ways to Earn</div>
+  <div class="section-sub">Multiple income streams every day</div>
+  <div class="earn-grid">
+    <div class="earn-card"><div class="earn-left"><div class="earn-icon">📱</div><div><div class="earn-name">WhatsApp Adverts</div><div class="earn-desc">Post our advert as status & earn per view</div></div></div><div class="earn-amount">KES 1/view</div></div>
+    <div class="earn-card"><div class="earn-left"><div class="earn-icon">👥</div><div><div class="earn-name">Referrals (3 Levels)</div><div class="earn-desc">Invite friends and earn from 3 levels</div></div></div><div class="earn-amount">KES 80+</div></div>
+    <div class="earn-card"><div class="earn-left"><div class="earn-icon">🧠</div><div><div class="earn-name">Trivia & Math Quiz</div><div class="earn-desc">Answer questions correctly every week</div></div></div><div class="earn-amount">Per Task</div></div>
+    <div class="earn-card"><div class="earn-left"><div class="earn-icon">📝</div><div><div class="earn-name">Daily Surveys</div><div class="earn-desc">Complete short surveys once per day</div></div></div><div class="earn-amount">Per Week</div></div>
+    <div class="earn-card"><div class="earn-left"><div class="earn-icon">📈</div><div><div class="earn-name">Forex Trading</div><div class="earn-desc">Stake and earn weekly profit</div></div></div><div class="earn-amount">Per Week</div></div>
+    <div class="earn-card"><div class="earn-left"><div class="earn-icon">⚽</div><div><div class="earn-name">Betting Predictions</div><div class="earn-desc">Predict match outcomes for free weekly</div></div></div><div class="earn-amount">Per Week</div></div>
+    <div class="earn-card"><div class="earn-left"><div class="earn-icon">🎁</div><div><div class="earn-name">Karibu Bonus</div><div class="earn-desc">Get KES 100 karibu bonus after registration</div></div></div><div class="earn-amount">KES 100</div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div class="section-title">💬 What Members Say</div>
+  <div class="section-sub">Real comments from our community</div>
+  <div class="testi-grid" id="testi-grid"></div>
+</section>
+
+<!-- WITHDRAWAL METHODS -->
+<section class="withdraw-section">
+  <div class="section-title">💸 Withdrawal Methods</div>
+  <div class="section-sub">Fast & secure payments by country</div>
+  <div class="withdraw-grid">
+
+    <!-- Kenya -->
+    <div class="withdraw-card">
+      <div class="withdraw-country">🇰🇪 Kenya</div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#4CAF50;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/120px-M-PESA_LOGO-01.svg.png" style="width:26px;height:26px;object-fit:contain;border-radius:4px;" onerror="this.parentNode.innerHTML='M'"/>
+          </div>
+          <span class="method-name">M-Pesa</span>
+        </div>
+        <span class="method-min">Min KES 150</span>
+      </div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#003087;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='P'"/>
+          </div>
+          <span class="method-name">PayPal</span>
+        </div>
+        <span class="method-min">Min KES 150</span>
+      </div>
+    </div>
+
+    <!-- Uganda -->
+    <div class="withdraw-card">
+      <div class="withdraw-country">🇺🇬 Uganda</div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#FFCC00;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MTN_logo_2022.svg/120px-MTN_logo_2022.svg.png" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='M'"/>
+          </div>
+          <span class="method-name">MTN Mobile Money</span>
+        </div>
+        <span class="method-min">Min UGX 3,900</span>
+      </div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#E40000;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Airtel_Africa_new_logo.svg/120px-Airtel_Africa_new_logo.svg.png" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='A'"/>
+          </div>
+          <span class="method-name">Airtel Money</span>
+        </div>
+        <span class="method-min">Min UGX 3,900</span>
+      </div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#003087;"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='P'"/></div>
+          <span class="method-name">PayPal</span>
+        </div>
+        <span class="method-min">Min UGX 3,900</span>
+      </div>
+    </div>
+
+    <!-- Tanzania -->
+    <div class="withdraw-card">
+      <div class="withdraw-country">🇹🇿 Tanzania</div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#E40000;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Airtel_Africa_new_logo.svg/120px-Airtel_Africa_new_logo.svg.png" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='A'"/></div>
+          <span class="method-name">Airtel Money</span>
+        </div>
+        <span class="method-min">Min TZS 7,000</span>
+      </div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#003087;"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='P'"/></div>
+          <span class="method-name">PayPal</span>
+        </div>
+        <span class="method-min">Min TZS 7,000</span>
+      </div>
+    </div>
+
+    <!-- Rwanda -->
+    <div class="withdraw-card">
+      <div class="withdraw-country">🇷🇼 Rwanda</div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#FFCC00;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MTN_logo_2022.svg/120px-MTN_logo_2022.svg.png" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='M'"/></div>
+          <span class="method-name">MTN Mobile Money</span>
+        </div>
+        <span class="method-min">Min RWF 1,350</span>
+      </div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#E40000;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Airtel_Africa_new_logo.svg/120px-Airtel_Africa_new_logo.svg.png" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='A'"/></div>
+          <span class="method-name">Airtel Money</span>
+        </div>
+        <span class="method-min">Min RWF 1,350</span>
+      </div>
+      <div class="method-row">
+        <div class="method-left">
+          <div class="method-logo" style="background:#003087;"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" style="width:26px;height:26px;object-fit:contain;" onerror="this.parentNode.innerHTML='P'"/></di
